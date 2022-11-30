@@ -208,13 +208,13 @@ trait StreamFilter
      */
     protected function sanitizeStreamFilter($filter_name)
     {
-        return urldecode($this->validateString($filter_name));
+        return urldecode(static::validateString($filter_name));
     }
 
     /**
      * @inheritdoc
      */
-    abstract public function validateString($str);
+    abstract public static function validateString($str);
 
     /**
      * Detect if the stream filter is already present
